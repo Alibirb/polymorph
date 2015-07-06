@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+	Copyright 2015 Daniel Piros/WriterOfAlicrow
+
+	This file is part of Polymorph
+
+	Polymorph is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	Polymorph is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with Polymorph.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+	<head>
+		<!--
+		<ear />
+		<eye />
+		<nose />
+		<eye />
+		<ear />
+		...
+		Oh, it's not that kind of head? My bad.
+		-->
+		<meta charset="UTF-8">
+		
+		<title>Polymorph Fursona Creator</title>
+	</head>
+	<body>
+		<h1>Polymorph Fursona Creator v0.00</h1>
+		
+		Furriness:
+		<input type="range" id="furriness_slider" value="0" defaultValue="0" min="0" max="1" step="0.01" oninput="refresh_display()">
+		
+		<br />
+		
+		<svg id="result" height="474.92" width="169.38"></svg>
+		<svg id="template_svg" />
+		
+		<script src="snap.svg.js"></script>
+		<script src="morph.js"></script>
+		
+	</body>
+</html>
