@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="465" width="211.8" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:polymorph="http://alicrow.com/namespaces/polymorph" height="465" width="211.8" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<metadata id="metadata7">
 		<rdf:RDF>
 			<cc:Work rdf:about="">
@@ -18,40 +18,50 @@
 			</cc:License>
 		</rdf:RDF>
 	</metadata>
-	<g id="base_layer" transform="translate(-13.59375,-47.968748)" stroke="#000" stroke-linecap="butt" display="none" fill="none">
-		<path id="Head" d="m115,59.594c0,31.756-25.744,57.5-57.5,57.5s-57.5-25.744-57.5-57.5,25.744-57.5,57.5-57.5,57.5,25.744,57.5,57.5z" transform="matrix(1.1130435,0,0,1.1130435,30.09375,62.138313)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="0.8984375"/>
-		<path id="path3787" stroke-linejoin="miter" d="m64,156.09,0,192-64,112" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3789" stroke-linejoin="miter" d="m64,348.09,64,112" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3791" stroke-linejoin="miter" d="m112,244.09-48-40-48,40" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="ear_l" stroke-linejoin="miter" d="m102.02,40.796,5.3572,3.9201,4.3841,4.8965" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="ear_r" stroke-linejoin="miter" d="m56.575,76.006-5.6098,5.0565-5.0155,5.0227" stroke-width="1px"/>
-		<path id="path3002" stroke-linejoin="miter" d="m65.41,153.5c25.066,3.1753,39.501,1.8826,54.043,0" stroke-width="1px"/>
-		<path id="path3004" d="m62.377,74.271c0,2.0224-1.7525,3.6618-3.9143,3.6618s-3.9143-1.6394-3.9143-3.6618,1.7525-3.6618,3.9143-3.6618,3.9143,1.6394,3.9143,3.6618z" transform="matrix(1.3173377,0,0,1.2702575,-5.173885,20.120436)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1"/>
-		<path id="path3006" d="m107.33,74.902c0,2.5105-2.3178,4.5457-5.177,4.5457s-5.177-2.0352-5.177-4.5457,2.3178-4.5457,5.177-4.5457,5.177,2.0352,5.177,4.5457z" transform="matrix(1.0615972,0,0,1.1812635,3.2981659,25.352971)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1"/>
-		<path id="path3094-2" stroke-linejoin="miter" d="m94.108,384.84c-0.0461-0.006-0.07851,0.028,0.01103-0.003,0.11065-0.0382-0.06246-0.0641-0.0014,0.006,0.05863,0.0677,0.05435-0.001-0.0085-0.0135-0.15999-0.0308,0.05492,0.0563-0.0086,0.0138-0.08172-0.0546-0.02815-0.002,0.01671-0.007,0.04867-0.005-0.04384-0.0647-0.02233,0.002,0.0193,0.0601-0.04076-0.094,0.0044,0.005,0.04299,0.0939-0.04226-0.0342,0.0035-0.005,0.04781,0.0309-0.03715,0.0538-0.000117,0.001,0.02756-0.0393,0.008-0.0873,0.0066-0.01-0.0022,0.12301-0.0052,0.005-0.0052,0.005-0.02623,0.006,0.01852-0.0309,0.02444-0.0796" stroke-width="1px"/>
+	<g id="base_layer" transform="translate(-13.59375,-47.968748)">
+		<g id="head" polymorph:label="head">
+			<path id="path9" d="m115,59.594c0,31.756-25.744,57.5-57.5,57.5s-57.5-25.744-57.5-57.5,25.744-57.5,57.5-57.5,57.5,25.744,57.5,57.5z" transform="matrix(1.1130435,0,0,1.1130435,30.09375,62.138313)" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="0.8984375" fill="none"/>
+		</g>
+		<g id="torso" polymorph:label="torso">
+			<path id="path3787" stroke-linejoin="miter" d="m94.094,192.47,0,192" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none"/>
+		</g>
+		<g id="arms" polymorph:label="arms">
+			<path id="path14" stroke-linejoin="miter" d="m112,244.09-48-40-48,40" transform="translate(30.09375,36.375)" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none"/>
+		</g>
+		<g id="ears" stroke-linejoin="miter" polymorph:label="ears" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none">
+			<path id="ear_l" d="m102.02,40.796,5.3572,3.9201,4.3841,4.8965" transform="translate(30.09375,36.375)"/>
+			<path id="ear_r" d="m56.575,76.006-5.6098,5.0565-5.0155,5.0227"/>
+		</g>
+		<g id="mouth" polymorph:label="mouth">
+			<path id="path3002" stroke-linejoin="miter" d="m65.41,153.5c25.066,3.1753,39.501,1.8826,54.043,0" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none"/>
+		</g>
+		<g id="eyes" polymorph:label="eyes" stroke="#000" stroke-linecap="butt" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1" fill="none">
+			<path id="path3004" d="m62.377,74.271c0,2.0224-1.7525,3.6618-3.9143,3.6618s-3.9143-1.6394-3.9143-3.6618,1.7525-3.6618,3.9143-3.6618,3.9143,1.6394,3.9143,3.6618z" transform="matrix(1.3173377,0,0,1.2702575,-5.173885,20.120436)"/>
+			<path id="path3006" d="m107.33,74.902c0,2.5105-2.3178,4.5457-5.177,4.5457s-5.177-2.0352-5.177-4.5457,2.3178-4.5457,5.177-4.5457,5.177,2.0352,5.177,4.5457z" transform="matrix(1.0615972,0,0,1.1812635,3.2981659,25.352971)"/>
+		</g>
+		<g id="tail" polymorph:label="tail">
+			<path id="path3094-2" stroke-linejoin="miter" d="m94.108,384.84c-0.0461-0.006-0.07851,0.028,0.01103-0.003,0.11065-0.0382-0.06246-0.0641-0.0014,0.006,0.05863,0.0677,0.05435-0.001-0.0085-0.0135-0.15999-0.0308,0.05492,0.0563-0.0086,0.0138-0.08172-0.0546-0.02815-0.002,0.01671-0.007,0.04867-0.005-0.04384-0.0647-0.02233,0.002,0.0193,0.0601-0.04076-0.094,0.0044,0.005,0.04299,0.0939-0.04226-0.0342,0.0035-0.005,0.04781,0.0309-0.03715,0.0538-0.000117,0.001,0.02756-0.0393,0.008-0.0873,0.0066-0.01-0.0022,0.12301-0.0052,0.005-0.0052,0.005-0.02623,0.006,0.01852-0.0309,0.02444-0.0796" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none"/>
+		</g>
+		<g id="legs" stroke-linejoin="miter" polymorph:label="legs" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none">
+			<path id="leg_l" d="m64,348.09,64,112" transform="translate(30.09375,36.375)"/>
+			<path id="path3173" d="m80.5,336.5-64,112" transform="translate(13.59375,47.968748)"/>
+		</g>
 	</g>
-	<g id="cat_layer" transform="translate(-13.59375,-47.968748)" stroke="#000" stroke-linecap="butt" display="none" fill="none">
-		<path id="path3817" d="m115,59.594c0,31.756-25.744,57.5-57.5,57.5s-57.5-25.744-57.5-57.5,25.744-57.5,57.5-57.5,57.5,25.744,57.5,57.5z" transform="matrix(1.1130435,0,0,1.1130435,30.09375,62.138313)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="0.8984375"/>
-		<path id="path3819" stroke-linejoin="miter" d="m64,156.09,0,192-64,112" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3821" stroke-linejoin="miter" d="m64,348.09,64,112" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3823" stroke-linejoin="miter" d="m112,244.09-48-40-48,40" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="cat_ear_l" stroke-linejoin="miter" d="M88,33.094,132,18.452,121.86,64.639" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="cat_ear_r" stroke-linejoin="miter" d="M69.707,69.188,25.712,54.546,35.848,100.73" stroke-width="1px"/>
-		<path id="path3002-1" stroke-linejoin="miter" d="m63.976,155.01c10.26,24.83,48.828,19.094,58.686,1.0714" stroke-width="1px"/>
-		<path id="path3004-9" d="m62.377,74.271c0,2.0224-1.7525,3.6618-3.9143,3.6618s-3.9143-1.6394-3.9143-3.6618,1.7525-3.6618,3.9143-3.6618,3.9143,1.6394,3.9143,3.6618z" transform="matrix(1.3173377,0,0,1.2702575,-5.4630627,20.006236)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1"/>
-		<path id="path3006-2" d="m107.33,74.902c0,2.5105-2.3178,4.5457-5.177,4.5457s-5.177-2.0352-5.177-4.5457,2.3178-4.5457,5.177-4.5457,5.177,2.0352,5.177,4.5457z" transform="matrix(1.0615972,0,0,1.1812635,3.008988,25.238771)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1"/>
-		<path id="path3094-2-2" stroke-linejoin="miter" d="m94.231,384.9c-0.0461-0.006-0.07851,0.028,0.01103-0.003,0.11065-0.0382-0.06246-0.0641-0.0014,0.006,0.05863,0.0677,0.05435-0.001-0.0085-0.0135-0.15999-0.0308,0.05492,0.0563-0.0086,0.0138-0.08172-0.0546-0.02815-0.002,0.01671-0.007,0.04867-0.005-0.04384-0.0647-0.02233,0.002,0.0193,0.0601-0.04076-0.094,0.0044,0.005,0.04299,0.0939-0.04226-0.0342,0.0035-0.005,0.04781,0.0309-0.03715,0.0538-0.000117,0.001,0.02756-0.0393,0.008-0.0873,0.0066-0.01-0.0022,0.12301-0.0052,0.005-0.0052,0.005-0.02623,0.006,0.01852-0.0309,0.02444-0.0796" stroke-width="1px"/>
+	<g id="cat_layer" transform="translate(-13.59375,-47.968748)">
+		<g id="cat_ears" stroke-linejoin="miter" polymorph:label="ears" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none">
+			<path id="cat_ear_l" d="M88,33.094,132,18.452,121.86,64.639" transform="translate(30.09375,36.375)"/>
+			<path id="cat_ear_r" d="M69.707,69.188,25.712,54.546,35.848,100.73"/>
+		</g>
+		<g id="cat_mouth" polymorph:label="mouth">
+			<path id="path3002-1" stroke-linejoin="miter" d="m63.976,155.01c10.26,24.83,48.828,19.094,58.686,1.0714" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none"/>
+		</g>
 	</g>
-	<g id="squirrel_layer" transform="translate(-13.59375,-47.968748)" stroke="#000" stroke-linecap="butt" fill="none">
-		<path id="path3018" d="m115,59.594c0,31.756-25.744,57.5-57.5,57.5s-57.5-25.744-57.5-57.5,25.744-57.5,57.5-57.5,57.5,25.744,57.5,57.5z" transform="matrix(1.1130435,0,0,1.1130435,30.09375,62.138313)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="0.8984375"/>
-		<path id="path3020" stroke-linejoin="miter" d="m64,156.09,0,192-64,112" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3022" stroke-linejoin="miter" d="m64,348.09,64,112" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3024" stroke-linejoin="miter" d="m112,244.09-48-40-48,40" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3026" stroke-linejoin="miter" d="m102.02,40.796,5.3572,3.9201,4.3841,4.8965" transform="translate(30.09375,36.375)" stroke-width="1px"/>
-		<path id="path3028" stroke-linejoin="miter" d="m56.575,76.006-5.6098,5.0565-5.0155,5.0227" stroke-width="1px"/>
-		<path id="path3030" stroke-linejoin="miter" d="m65.41,153.5c19.566,9.5503,40.626,7.5076,54.043,0" stroke-width="1px"/>
-		<path id="path3032" d="m62.377,74.271c0,2.0224-1.7525,3.6618-3.9143,3.6618s-3.9143-1.6394-3.9143-3.6618,1.7525-3.6618,3.9143-3.6618,3.9143,1.6394,3.9143,3.6618z" transform="matrix(1.3173377,0,0,1.2702575,-5.173885,20.120436)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1"/>
-		<path id="path3034" d="m107.33,74.902c0,2.5105-2.3178,4.5457-5.177,4.5457s-5.177-2.0352-5.177-4.5457,2.3178-4.5457,5.177-4.5457,5.177,2.0352,5.177,4.5457z" transform="matrix(1.0615972,0,0,1.1812635,3.2981659,25.352971)" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1"/>
-		<path id="path3094" stroke-linejoin="miter" d="m156.63,391.97c-3.1281-0.38021-1.0308-4.4043,0.63195-5.1992,4.5059-2.1542,8.9738,2.279,9.7664,6.4631,1.4178,7.4843-5.2462,13.711-12.294,14.334-10.343,0.91414-18.536-8.2349-18.901-18.125-0.48637-13.182,11.229-23.396,23.956-23.468,16.017-0.0911,28.273,14.224,28.035,29.788-0.28738,18.849-17.221,33.159-35.619,32.603-21.681-0.65621-38.052-20.218-37.17-41.45,1.0189-24.513,23.215-42.95,47.281-41.737,27.345,1.3776,47.849,26.213,46.304,53.112-1.7333,30.177-29.211,52.751-58.943,50.872-33.008-2.087-57.655-32.209-55.439-64.774" stroke-width="1.37878919px"/>
+	<g id="squirrel_layer" transform="translate(-13.59375,-47.968748)">
+		<g id="squirrel_mouth" polymorph:label="mouth">
+			<path id="path3030" stroke-linejoin="miter" d="m65.41,153.5c19.566,9.5503,40.626,7.5076,54.043,0" stroke="#000" stroke-linecap="butt" stroke-width="1px" fill="none"/>
+		</g>
+		<g id="squirrel_tail" polymorph:label="tail">
+			<path id="path3094" stroke-linejoin="miter" d="m156.63,391.97c-3.1281-0.38021-1.0308-4.4043,0.63195-5.1992,4.5059-2.1542,8.9738,2.279,9.7664,6.4631,1.4178,7.4843-5.2462,13.711-12.294,14.334-10.343,0.91414-18.536-8.2349-18.901-18.125-0.48637-13.182,11.229-23.396,23.956-23.468,16.017-0.0911,28.273,14.224,28.035,29.788-0.28738,18.849-17.221,33.159-35.619,32.603-21.681-0.65621-38.052-20.218-37.17-41.45,1.0189-24.513,23.215-42.95,47.281-41.737,27.345,1.3776,47.849,26.213,46.304,53.112-1.7333,30.177-29.211,52.751-58.943,50.872-33.008-2.087-57.655-32.209-55.439-64.774" stroke="#000" stroke-linecap="butt" stroke-width="1.37878919px" fill="none"/>
+		</g>
 	</g>
 </svg>
