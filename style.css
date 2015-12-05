@@ -1,0 +1,14 @@
+#result_div {
+	float: left;
+	border: 1px solid black;
+}
+
+#sliders_div {
+	float: left;
+	border: 1px solid black;
+	margin: 16px;
+}
+
+#content_div {
+	margin: 32px;
+}

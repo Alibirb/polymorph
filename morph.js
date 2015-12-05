@@ -19,13 +19,8 @@
 
 var template = Snap("#template_svg");
 var result = Snap("#result");
-var base_template;
-var cat_template;
-var squirrel_template;
 var template_groups;
 var loaded;
-var result_elements_group;
-var furriness, squirreliness;
 
 
 function copy_attributes(src_node, dest_node) {
@@ -35,6 +30,20 @@ function copy_attributes(src_node, dest_node) {
 			continue;
 		dest_node.setAttribute(attr.name, attr.value);
 	}
+}
+
+/**
+* Returns the morph value for the given node.
+* @param {node} node
+*/
+function get_morph_value(node) {
+	if(node.getAttribute("polymorph:morph_name") === "base") {
+		return 1.0;
+	}
+	if(node.getAttribute("polymorph:morph_name") === null) {
+		return 1.0;
+	}
+	return document.getElementById(node.getAttribute("polymorph:morph_name") + "_slider").value;
 }
 
 
@@ -70,10 +79,7 @@ function convertToAbsolute(path){
 	}
 }
 
-
 function merge_path_elements(result_path, elements, values) {
-	console.log("merging path elements");
-	
 	var seg_lists = [];
 	
 	for(var i=0; i < elements.length; ++i) {
@@ -224,9 +230,13 @@ function merge_path_elements(result_path, elements, values) {
 	}
 }
 
+/**
+ * Merges 'groups' into 'result_group', according to 'values'
+ * @param result_group
+ * @param groups[] array of groups to merge. The first group must be the base group.
+ * @param {number} values[]
+ */ 
 function merge_group_elements(result_group, groups, values) {
-	console.log("merging group elements");
-
 	var base_group = groups[0];
 	var base_elements = base_group.children;
 	
@@ -252,7 +262,7 @@ function merge_group_elements(result_group, groups, values) {
 				for(var k=0; k < groups[j].children.length; ++k) {
 					if(groups[j].children[k].nodeName === "g" && groups[j].children[k].getAttribute("polymorph:label") === group_name) {
 						matching_groups.push(groups[j].children[k]);
-						matching_group_values.push(values[j]);
+						matching_group_values.push(get_morph_value(groups[j].children[k]));
 						break;
 					}
 				}
@@ -266,41 +276,67 @@ function merge_group_elements(result_group, groups, values) {
 
 
 function refresh_display() {
-	furriness = document.getElementById("furriness_slider").value;
-	squirreliness = document.getElementById("squirreliness_slider").value;
-	
 	result.clear();
 	
+	var base_template = template_groups[0];
 	var base_elements = base_template.node.children;
-	var cat_elements = cat_template.node.children;
-	var squirrel_elements = squirrel_template.node.children;
 	
 	/// result_elements_group is analogous to base_template
-	result_elements_group = result.group();
+	var result_elements_group = result.group();
 	
 	/// Copy base attributes into result group
-	for(var i=0; i < base_template.node.attributes.length; ++i) {
-		var attr = base_template.node.attributes[i];
-		if(attr.name === "id") {
-			continue;
-		}
-		result_elements_group.node.setAttribute(attr.name, attr.value);
+	copy_attributes(base_template.node, result_elements_group.node);
+	
+	var group_nodes = [];
+	var values = [1];
+	for(var i=0; i < template_groups.length; ++i) {
+		group_nodes[i] = template_groups[i].node;
+		values[i] = get_morph_value(template_groups[i].node);
 	}
 	
-	merge_group_elements(result_elements_group, [base_template.node, cat_template.node, squirrel_template.node], [1, furriness, squirreliness]);
+	merge_group_elements(result_elements_group, group_nodes, values);
 }
 
 
+
 Snap.load("polymorph-opt.svg", function(loaded_svg) {
-	template.attr({
-		height: 500,
-		width: 200
-	});
 	template_groups = loaded_svg.selectAll("svg > g");	/// all g elements whose parent is an svg element
-	base_template = template_groups[0];
-	cat_template = template_groups[1];
-	squirrel_template = template_groups[2];
 	loaded = loaded_svg;
+	
+	var morph_groups = loaded_svg.selectAll("[polymorph\\:morph_name]");	/// All elements with a polymorph:morph_name attribute
+	
+	// Add the sliders
+	var sliders_div = document.getElementById("sliders_div");
+	var sliders_table = document.createElement("table");
+	sliders_div.appendChild(sliders_table);
+	
+	for(var i=0; i < morph_groups.length; ++i) {
+		var morph_name = morph_groups[i].node.getAttribute("polymorph:morph_name");
+		
+		if(morph_name === "base") {
+			continue;	// skip nodes that are part of the base morph.
+		}
+		
+		var table_row = document.createElement("tr");
+		sliders_table.appendChild(table_row);
+		
+		var td = document.createElement("td");
+		table_row.appendChild(td)
+		td.appendChild(document.createTextNode(morph_name));
+		
+		var slider = document.createElement("input");
+		slider.type = "range";
+		slider.value = 0;
+		slider.defaultValue = 0;
+		slider.min = 0;
+		slider.max = 1;
+		slider.step = 0.01;
+		slider.oninput = refresh_display;
+		slider.id = morph_name + "_slider";
+		td = document.createElement("td");
+		table_row.appendChild(td);
+		td.appendChild(slider);
+	}
 	
 	refresh_display();
 });
